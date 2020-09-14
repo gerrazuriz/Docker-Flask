@@ -1,2 +1,2 @@
 # Docker-Flask
-Flask web app on a Docker container
+Primera prueba de aplicación web con Flask en un container de Docker, alojado en Heroku: https://music-genre.herokuapp.com
