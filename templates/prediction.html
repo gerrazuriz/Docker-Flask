@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<title>Music genre prediction</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<head>
+  <script>
+  </script>
+  <title>Responsive Textarea</title>
+    <style>
+        .container {
+            max-width: 820px;
+            margin: 5px auto;
+            margin-top: 50px;
+        }
+
+        .comment {
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+
+        .commenter {
+            float: left;
+        }
+
+        .commenter img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .comment-text-area {
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+
+        .textinput {
+            float: left;
+            width: 100%;
+            min-height: 348px;
+            outline: none;
+            resize: none;
+            border: 3px solid grey;
+        }
+    </style>
+</head>
+
+
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Music genre prediction</b></h1>
+  <p>Created by <span class="w3-tag">Guillermo Errázuriz</span></p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+  <div class="w3-col l6 w3-center">
+    <div class="w3-margin w3-left-align">
+      <p><h1 style="font-size:20px">The most likely genre is...</h1></p>
+    <p><b><h1 style="font-size:50px">{{ most_likely_genre}}</h1></b></p>
+    </div>
+    
+  <!-- END BLOG ENTRIES -->
+  </div>
+
+  <div class="w3-col l6 w3-center">
+    <div class="w3-margin w3-left-align">
+      <p><h1 style="font-size:20px">How likely is it?</h1></p>
+      <p><b><h1 style="font-size:50px">{{ genre_proba }}</h1></b></p>
+    </div>
+
+    
+    
+  <!-- END BLOG ENTRIES -->
+  </div>
+<!-- Blog entries -->
+<div class="w3-col l6 s12">
+  <!-- Blog entry -->
+  <!--<div class="w3-card-4 w3-margin w3-white w3-padding-32">
+    <h1 style="font-size:1vw">{{ lyrics }}</h1>
+    <h1 style="font-size:2vw">The most likely genre is...</h1>
+    <div class="w3-card-4 w3-margin w3-white w3-padding-32">
+      <h1 style="font-size:3vw">{{ most_likely_genre }}</h1>
+    </div>
+  </div>-->
+  <div class="w3-card-4 w3-margin w3-white w3-padding-32">
+    <img src={{ url_for('predict') }} alt="Nature" style="width:98%">
+    <!--<div class="w3-container">
+      <h3><b>TITLE HEADING</b></h3>
+      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+    </div>-->
+
+    <!--<div class="w3-container">
+      <p>Enter a song's lyrics to predict its genre.</p>
+      <div class="w3-row">
+      </div>
+    </div>-->
+  </div>
+  
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l6">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top w3-white">
+          <form action="/prediction">
+              <div class="comment">
+                  <textarea type='text' name='lyrics' class="textinput w3-container w3-border" placeholder="Enter part of a song's lyrics to predict its genre."></textarea>
+              </div>
+              <input name="forwardBtn" class="w3-button w3-block w3-padding-large w3-black" type='submit' value='Predict genre'>
+          </form>
+  </div>
+</div> 
+
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+</body>
+</html>

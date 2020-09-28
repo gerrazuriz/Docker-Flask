@@ -5,10 +5,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<head>
+  <script>
+  </script>
+  <title>Responsive Textarea</title>
+    <style>
+        .container {
+            max-width: 820px;
+            margin: 5px auto;
+            margin-top: 50px;
+        }
+
+        .comment {
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+
+        .commenter {
+            float: left;
+        }
+
+        .commenter img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .comment-text-area {
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+
+        .textinput {
+            float: left;
+            width: 100%;
+            min-height: 250px;
+            outline: none;
+            resize: none;
+            border: 3px solid grey;
+        }
+    </style>
+</head>
+
+
+
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
-<body class="w3-dark-grey">
+<body class="w3-light-grey">
 
 <div class="w3-content" style="max-width:1400px">
 
@@ -21,35 +67,32 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <!-- Grid -->
 <div class="w3-row">
 
-<!-- Blog entries -->
-<div class="w3-col l8 s12">
-  <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-    <img src="{{ url_for('visualize3') }}" alt="Nature" style="width:100%">
-    <!--<div class="w3-container">
-      <h3><b>TITLE HEADING</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 7, 2014</span></h5>
-    </div>-->
-
-    <div class="w3-container">
-      <p>Enter a song's lyrics to predict its genre.</p>
-      <div class="w3-row">
-      </div>
-    </div>
+<div class="w3-col l10 w3-center">
+  <div class="w3-margin w3-left-align">
+  <p><b>What's this website for?</b></p>
+    
+  <p>The purpose of this website is to let other people use a machine learning model that I made.</p>
+    
+  <p><b>How does it work?</b></p>
+    
+  <p>In short, you enter a song's lyrics, and the model will analyze the words to make a guess as to which musical genre it belongs to.</p>
   </div>
   
 <!-- END BLOG ENTRIES -->
 </div>
 
 <!-- Introduction menu -->
-<div class="w3-col l4">
+<div class="w3-col w3-center">
   <!-- About Card -->
-  <div class="w3-card w3-margin w3-margin-top">
-    <div class="w3-container w3-white">
-      <h4><b>My Name</b></h4>
-      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
-    </div>
-  </div> 
+  <div class="w3-card w3-margin w3-margin-top w3-white">
+          <form action="/prediction">
+              <div class="comment">
+                  <textarea type='text' name='lyrics' class="textinput w3-container w3-border" placeholder="Enter part of a song's lyrics to predict its genre."></textarea>
+              </div>
+              <input name="forwardBtn" class="w3-button w3-block w3-padding-large w3-black" type='submit' value='Predict genre'>
+          </form>
+  </div>
+</div> 
 
   
 <!-- END Introduction Menu -->
