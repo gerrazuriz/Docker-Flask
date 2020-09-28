@@ -1,3 +1,4 @@
 # Docker-Flask
-Primera prueba de aplicación web con Flask, en un container de Docker, en un server de Heroku:
+Modelo de predicción de género musical convertido en aplicación web con Flask, en un container de Docker y funcionando en un servidor de Heroku:
+
 https://music-genre.herokuapp.com
